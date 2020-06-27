@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Space bowling</title>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="game">
+    <div id="gameUI">
+      <div id="gameMainPage">
+        <h1 class="noSelect">Space bowling</h1>
+        <p class="noSelect">This is an awesome game.</p>
+        <p class="noSelect"><a class="button" onclick="switchToGamePage()">Game</a></p>
+        <p class="noSelect"><a class="button" onclick="switchToRulesPage()">Rules</a></p>
+        <p class="noSelect"><a class="button" onclick="switchToRecordsPage()">High scores</a></p>
+      </div>
+      <div id="gameGamePage">
+        <div id="gameIntro">
+          <h1 class="noSelect">Space bowling</h1>
+          <p class="noSelect">Do it faster than anyone!</p>
+          <p class="noSelect"><a id="gamePlay" class="button">Play</a></p>
+        </div>
+        <div id="gameStats">
+          <p class="noSelect">Asteroids: <span id="gameRemaining"></span></p>
+          <p class="noSelect">Clicks: <span class="gameScore"></span></p>
+          <p class="noSelect"><a class="gameReset" href="">Reset</a></p>
+        </div>
+        <div id="gameComplete">
+          <h1 class="noSelect">You win!</h1>
+          <p class="noSelect">Congratulations, you completed the game in <span class="gameScore"></span> clicks.</p>
+          <br>
+          <p class="noSelect">Enter your name!</p>
+          <p class="noSelect">Name should consist of a capital English letter and many small!</p>
+          <p class="noSelect"><input type="text" id="gamerName"></p>
+          <p class="noSelect" id="gameResult">Your results have been saved!</p>
+          <p class="noSelect"><a class="gameSave button" href="">Save result</a></p>
+          <p class="noSelect"><a class="gameReset button" href="">Play again</a></p>
+          <p class="noSelect"><a class="button" onclick="switchToMainPage()">Main</a></p>
+        </div>
+      </div>
+      <div id="gameResultPage">
+        <div id="tableScores"></div>
+      </div>
+      <div id="gameRulesPage">
+        <h1 class="noSelect">Space bowling</h1>
+        <br>
+        <p class="noSelect">You are in space! And you have a bowling ball. You need for fewer attempts to knock out all
+          the asteroids from the circle. The fewer attempts you spend, the better your outcome!</p>
+        <br>
+        <p class="noSelect">Good luck!</p>
+      </div>
+    </div>
+    <canvas id="gameCanvas" width="350" height="600"></canvas>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/gameScript.js"></script>
+  <script type="text/javascript" src="js/resultScript.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
